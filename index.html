@@ -169,13 +169,81 @@
         </div>
       </section>
       <!--Bus info section-->
-      <section class="bus-info bg-[#F7F8F8] rounded-md">
+      <section class="bus-info bg-[#F7F8F8] rounded-lg">
         <div class="text-center mx-auto space-y-5 w-4/6">
           <h2 class="text-3xl text-black font-bold">REH Paribahan</h2>
           <p class="text-lg text-[#03071299]">
             Yes, you can run unit tests and view the results directly within the
             app. The integrated testing features allow for a streamlined .
           </p>
+        </div>
+        <!--Bus info card-->
+        <div
+          class="container mx-auto parent flex items-center max-w-[1100px] h-[390px] bg-white px-7 rounded-md"
+        >
+          <div
+            class="child-left w-5/6 border-r-4 pr-5 border-green-400 border-dashed"
+          >
+            <!--Upper section bus image and seat left-->
+            <div
+              class="upper-section flex justify-between px-7 py-6 items-center"
+            >
+              <div class="flex">
+                <img src="./images/bus-logo.png" alt="" />
+                <div class="">
+                  <h2 class="text-2xl text-black font-semibold">
+                    Green Line Paribahan
+                  </h2>
+                  <p class="text-[#03071299]">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div
+                class="seat-left flex justify-center items-center bg-[#1DD10026] h-[50px] w-[160px] rounded-md space-x-2"
+              >
+                <img src="./images/seat-green.png" alt="" />
+                <!--Seat left id-->
+                <p id="seat-left" class="text-[#1DD100]">40 Seats left</p>
+              </div>
+            </div>
+            <!--Mid section Route-->
+            <div class="bus-route px-7 py-5 bg-[#F7F8F8]">
+              <div class="flex justify-between items-center py-8">
+                <h3>Route</h3>
+                <p>Dhaka-Sylhet</p>
+                <hr />
+              </div>
+              <div class="flex justify-between items-center py-8">
+                <h3>Departure time</h3>
+                <p>9.00pm</p>
+                <hr />
+              </div>
+              <div class="flex space-x-8">
+                <div
+                  class="flex justify-center items-center h-[50px] w-[220px] rounded-md bg-[#0307120D]"
+                >
+                  <h4>Boarding point -</h4>
+                  <p>Laxmipur</p>
+                </div>
+                <div
+                  class="flex justify-center items-center h-[50px] w-[220px] rounded-md bg-[#0307120D]"
+                >
+                  <h4>Dropping point -</h4>
+                  <p>Bogura</p>
+                </div>
+                <div
+                  class="flex justify-center items-center h-[50px] w-[220px] rounded-md bg-[#0307120D]"
+                >
+                  <h4>Est. Time -</h4>
+                  <p>11hr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="child-right flex flex-col items-center w-2/6">
+            <img src="./images/fare.png" alt="" />
+            <h4 class="text-3xl text-black">550 Taka</h4>
+            <p>Per seat</p>
+          </div>
         </div>
       </section>
     </main>
