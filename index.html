@@ -271,7 +271,7 @@
       <!--Ticket Selecting section-->
       <section
         id="select-seat-section"
-        class="grid grid-cols-2 border-r-2 pr-7 border-dashed bg-red-300"
+        class="grid grid-cols-2 border-r-2 pr-7 border-dashed bg-red-300 gap-6"
       >
         <div class="col-span-1">
           <div class="mb-6">
@@ -292,7 +292,71 @@
         </div>
 
         <div class="col-span-1">
-          <h3 class="text-4xl">Your selected seat</h3>
+          <h3 class="text-4xl text-center">Your selected seat</h3>
+          <div
+            class="total-container mx-auto w-[430px] h-[340px] bg-blue-100 space-x-7 my-4 rounded-xl"
+          >
+            <div class="flex justify-around text-center mb-3">
+              <div>
+                Seat
+                <div class="badge badge-secondary">1</div>
+              </div>
+
+              <h1>Class</h1>
+              <h1>Price</h1>
+            </div>
+            <hr class="bg-black w-5/6 border-dashed" />
+            <div class="flex justify-around text-center">
+              <h1>C2</h1>
+              <p>Economy</p>
+              <p>Price</p>
+            </div>
+            <hr class="bg-black w-5/6 border-dashed" />
+            <div class="flex justify-around">
+              <h1>Total Price</h1>
+              <p>BDT 0</p>
+            </div>
+            <!--Coupon-->
+            <div
+              class="flex items-center mx-auto space-x-3 outline-none rounded-xl"
+            >
+              <input
+                type="text"
+                class="px-10 py-5"
+                placeholder="Do you have any coupon?"
+                name=""
+                id="coupon-input"
+              />
+              <button class="btn bg-[#1DD100] px-10 py-8">Apply</button>
+            </div>
+          </div>
+          <!--Passenger Info-->
+          <div class="passenger-info-container mx-auto h-[360px] w-[430px] bg-gray-50">
+            <div class="flex flex-col text-start justify-start">
+                <h1 class="font-semibold text-black px-6">
+                    Passenger Name *
+                </h1>
+                <input class="mx-auto rounded-xl px-24 py-4" type="text" name="" id="passenger-name">
+            </div>
+            <div class="flex flex-col text-start justify-start">
+                <h1 class="font-semibold text-black px-6">
+                    Phone Number *
+                </h1>
+                <input class="mx-auto rounded-xl px-24 py-4" placeholder="Enter your Phone" type="tel" name="" id="passenger-mobile">
+            </div>
+            <div class="flex flex-col text-start justify-start">
+                <h1 class="font-semibold text-black px-6">
+                    Email ID 
+                </h1>
+                <input class="mx-auto rounded-xl px-24 py-4" placeholder="Enter your Email" type="email" name="" id="passenger-email">
+            </div>
+            <div class="text-center mx-auto my-4 bg-[#1DD100] rounded-xl px-28 py-4">
+                <button class="font-semibold text-white text-xl">Next</button>
+            </div>
+            <div class="flex justify-evenly">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Cancellation Policy</a>
+            </div>
         </div>
       </section>
     </main>
