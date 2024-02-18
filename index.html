@@ -128,14 +128,19 @@
         </h1>
         <div class="my-5 card-section flex justify-center space-x-10">
           <!--card1-->
-          <div class="card w-96 bg-[#FFBF0F] text-primary-content">
+          <div
+            class="card w-96 h-[220px] bg-[#FFBF0F] text-primary-content relative"
+          >
             <div class="flex">
-              <div class="card-body border-r-4 pr-7">
+              <div class="card-body">
                 <h2 class="card-title font-bold text-black">20% OFF</h2>
                 <p class="text-black">
                   on your next purchase <br />
                   use by January 2024
                 </p>
+              </div>
+              <div class="absolute right-36">
+                <img src="./images/cupon-devider.png" alt="" />
               </div>
               <div class="card-body">
                 <!-- New15 Coupon code for new users -->
@@ -146,15 +151,29 @@
               </div>
             </div>
           </div>
+          <!--Another Card-->
+          <!-- <div class="card w-[570px]">
+            <div class="relative">
+              <img src="./images/Rectangle 8.png" alt="" />
+            </div>
+            <div class="absolute -top-[20%] right-40">
+              <img src="./images/cupon-devider.png" alt="" />
+            </div>
+          </div> -->
           <!--Card 2-->
-          <div class="card w-96 bg-[#F78C9C] text-primary-content">
+          <div
+            class="card w-96 h-[220px] bg-[#F78C9C] text-primary-content relative"
+          >
             <div class="flex">
-              <div class="card-body border-r-4 pr-7">
+              <div class="card-body">
                 <h2 class="card-title font-bold text-black">20% OFF</h2>
                 <p class="text-black">
                   on your next purchase <br />
                   use by January 2024
                 </p>
+              </div>
+              <div class="absolute right-36">
+                <img src="./images/cupon-devider.png" alt="" />
               </div>
               <div class="card-body">
                 <!--New15 Coupon code for new users-->
@@ -181,11 +200,12 @@
         </div>
         <!--Bus info card-->
         <div
-          class="container mx-auto parent flex items-center max-w-[1100px] h-[390px] bg-white px-7 rounded-md"
+          class="container mx-auto parent flex items-center max-w-[1100px] h-[408px] bg-white px-7 rounded-3xl relative"
         >
-          <div
-            class="child-left w-5/6 border-r-4 pr-5 border-green-400 border-dashed"
-          >
+          <div class="child-left w-5/6">
+            <div class="absolute -top-[3%] right-52">
+              <img src="./images/info-devider.png" alt="" />
+            </div>
             <!--Upper section bus image and seat left-->
             <div
               class="upper-section flex justify-between px-7 py-6 items-center"
@@ -208,7 +228,7 @@
               </div>
             </div>
             <!--Mid section Route-->
-            <div class="bus-route px-7 py-5 bg-[#F7F8F8]">
+            <div class="bus-route px-7 py-5 bg-[#F7F8F8] rounded-xl">
               <div class="flex justify-between items-center py-8">
                 <h3>Route</h3>
                 <p>Dhaka-Sylhet</p>
@@ -249,9 +269,30 @@
         </div>
       </section>
       <!--Ticket Selecting section-->
-      <section id="select-seat-section" class="select-ticket bg-[#F7F8F8]">
-        <div>
-          <p>Hello i am section</p>
+      <section
+        id="select-seat-section"
+        class="grid grid-cols-2 border-r-2 pr-7 border-dashed bg-red-300"
+      >
+        <div class="col-span-1">
+          <div class="mb-6">
+            <h3 class="text-4xl font-bold text-black">Select your seat</h3>
+            <hr />
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex">
+              <img src="./images/seat-gray.png" alt="" />
+              <p>Available</p>
+            </div>
+            <div class="flex">
+              <img src="./images/seat-green-filled.png" alt="" />
+              <p>Selected</p>
+              <hr />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-1">
+          <h3 class="text-4xl">Your selected seat</h3>
         </div>
       </section>
     </main>
