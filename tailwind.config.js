@@ -7,6 +7,9 @@ module.exports = {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)",
       },
+      backgroundImage: {
+        "coupon-image": "url('./images/Rectangle 8.png')",
+      },
     },
   },
   plugins: [],
