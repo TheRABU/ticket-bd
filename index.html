@@ -11,9 +11,11 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!--Custom Css-->
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="container mx-auto">
+    <header class="container mx-auto px-16 py-10">
       <!--Navbar-->
       <nav>
         <div class="navbar bg-base-100">
@@ -60,21 +62,57 @@
         </div>
       </nav>
       <!--Banner image-->
-      <section class="banner container mx-auto my-7 px-10 py-5">
-        <div class="background-image h-full w-full object-cover">
-          <img class="relative" src="./images/banner.png" alt="" />
-          <div class="absolute -my-96 mx-auto text-center">
-            <div class="px-6 w-auto">
-              <h1 class="text-6xl font-bold text-green-400">
-                End-to-end Travel <br />
-                with T-TicketBD
+      <section class="banner container mx-auto px-16 py-10">
+        <div
+          class="hero h-[550px] rounded-2xl relative"
+          style="background-image: url(images/banner.png)"
+        >
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold text-white">
+                Buy Tickets from <br />
+                T-TicketBD
               </h1>
-              <p class="text-white font-semibold text-xl">
+              <p class="mb-5">
                 Yes, you can run unit tests and view the results directly within
                 the app. The integrated testing features allow for a streamlined
                 .
               </p>
-              <button class="btn btn-success">Visit Now</button>
+              <button class="btn bg-[#1DD100] border-none">Buy Tickets</button>
+            </div>
+            <div
+              class="flex space-x-5 justify-around second-overlay-content absolute top-[92%]"
+            >
+              <!--first box-->
+              <div
+                class="flex items-center justify-center h-[80px] w-[220px] bg-white rounded-xl"
+              >
+                <img src="./images/people.png" alt="" />
+                <div class="text-center">
+                  <h4 class="text-xl text-[#030712] font-bold">5000+</h4>
+                  <p class="text-[#03071299]">Registered Users</p>
+                </div>
+              </div>
+              <!--second box-->
+              <div
+                class="flex items-center justify-center h-[80px] w-[220px] bg-white rounded-xl"
+              >
+                <img src="./images/ticket-cupon.png" alt="" />
+                <div class="text-center">
+                  <h4 class="text-xl text-[#030712] font-bold">1.7 lacks</h4>
+                  <p class="text-[#03071299]">Tickets Sold</p>
+                </div>
+              </div>
+              <!--Third box-->
+              <div
+                class="flex items-center justify-center h-[80px] w-[220px] bg-white rounded-xl"
+              >
+                <img src="./images/stoppage.png" alt="" />
+                <div class="text-center">
+                  <h4 class="text-xl text-[#030712] font-bold">80k</h4>
+                  <p class="text-[#03071299]">Rental partners</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
