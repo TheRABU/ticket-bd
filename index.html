@@ -302,76 +302,76 @@
             <div class="left-column grid col-span-2 gap-y-3">
                 <div>
                     A 
-                    <button class="btn btn-active ">A1</button>
+                    <button class="btn btn-active seat-btn"><h3>A1</h3></button>
                 </div>
                 <div>
                     B 
-                    <button class="btn btn-active ">B1</button>
+                    <button class="btn btn-active seat-btn "><h3>B1</h3></button>
                 </div>
                 <div>
                     C 
-                    <button class="btn btn-active ">C1</button>
+                    <button class="btn btn-active seat-btn "><h3>C1</h3></button>
                 </div>
                 <div>
                     D 
-                    <button class="btn btn-active ">D1</button>
+                    <button class="btn btn-active seat-btn "><h3>D1</h3></button>
                 </div>
                 
                 
             </div>
             <div class="right-column grid col-span-2 gap-y-3">
                 <div>
-                    <button class="btn btn-active">A2</button>
+                    <button class="btn btn-active seat-btn"><h3>A2</h3></button>
                 </div>
                 <div>
                    
-                    <button class="btn btn-active ">B2</button>
+                    <button class="btn btn-active seat-btn "><h3>B2</h3></button>
                 </div>
                 <div>
                    
-                    <button class="btn btn-active ">C2</button>
+                    <button class="btn btn-active seat-btn "><h3>C2</h3></button>
                 </div>
                 <div>
                     
-                    <button class="btn btn-active ">D2</button>
+                    <button class="btn btn-active seat-btn "><h3>D2</h3></button>
                 </div>
             </div>
             <!--Right side seats-->
             <div class="left-column grid col-span-2 gap-y-3">
                 <div>
             
-                    <button class="btn btn-active ">A3</button>
+                    <button class="btn btn-active seat-btn "><h3>A3</h3></button>
                 </div>
                 <div>
                 
-                    <button class="btn btn-active ">B3</button>
+                    <button class="btn btn-active seat-btn "><h3>B3</h3></button>
                 </div>
                 <div>
                 
-                    <button class="btn btn-active ">C3</button>
+                    <button class="btn btn-active seat-btn "><h3>C3</h3></button>
                 </div>
                 <div>
                 
-                    <button class="btn btn-active ">D3</button>
+                    <button class="btn btn-active seat-btn "><h3>D3</h3></button>
                 </div>
                 
                 
             </div>
             <div class="right-column grid col-span-2 gap-y-3">
                 <div>
-                    <button class="btn btn-active ">A4</button>
+                    <button class="btn btn-active seat-btn "><h3>A4</h3></button>
                 </div>
                 <div>
                    
-                    <button class="btn btn-active ">B4</button>
+                    <button class="btn btn-active seat-btn "><h3>B4</h3></button>
                 </div>
                 <div>
                    
-                    <button class="btn btn-active ">C4</button>
+                    <button class="btn btn-active seat-btn "><h3>C4</h3></button>
                 </div>
                 <div>
                     
-                    <button class="btn btn-active ">D4</button>
+                    <button class="btn btn-active seat-btn "><h3>D4</h3></button>
                 </div>
             </div>
            </div>
@@ -380,6 +380,7 @@
 
         <div class="col-span-1">
           <h3 class="text-4xl text-center">Your selected seat</h3>
+          
           <div
             class="total-container mx-auto w-[430px] h-[340px] bg-blue-100 space-x-7 my-4 rounded-xl"
           >
@@ -393,6 +394,8 @@
               <h1>Price</h1>
             </div>
             <hr class="bg-black w-5/6 border-dashed" />
+            <!--Display output-->
+            <div id="display-output-div"></div>
             <div class="flex justify-around text-center">
               <h1>C2</h1>
               <p>Economy</p>
@@ -400,8 +403,8 @@
             </div>
             <hr class="bg-black w-5/6 border-dashed" />
             <div class="flex justify-around">
-              <h1>Total Price</h1>
-              <p>BDT 0</p>
+              <h1>Total Price: </h1>
+              <p><span id="total-price">BDT</span></p>
             </div>
             <!--Coupon-->
             <div
@@ -414,11 +417,11 @@
                 name=""
                 id="coupon-input"
               />
-              <button class="btn bg-[#1DD100] px-10 py-8">Apply</button>
+              <button class="btn coupon-apply-btn bg-[#1DD100] px-10 py-8">Apply</button>
             </div>
             <div class="flex justify-around">
                 <h1>Grand Total</h1>
-                <p>00</p>
+                <p><span id="grand-total">00</span></p>
             </div>
           </div>
           <!--Passenger Info-->
@@ -452,5 +455,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
