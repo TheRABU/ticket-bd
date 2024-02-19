@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Tailwind and Daisy ui cdn-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!--Seat section-->
+    <div
+      class="flex justify-around container mx-auto px-5 lg:px-20 bg-blue-500"
+    >
+      <div class="select-seat text-center">
+        <h2 class="text-lg lg:text-3xl font-semibold text-black">
+          Select your seat
+        </h2>
+        <hr />
+        <div class="flex justify-between px-10 py-5">
+          <div class="flex">
+            <img src="./images/seat-gray.png" alt="" />
+            <p>Available</p>
+          </div>
+          <div class="flex">
+            <img src="./images/seat-green-filled.png" alt="" />
+            <p>Selected</p>
+          </div>
+        </div>
+        <!--Driver seat image-->
+        <div class="flex justify-end py-5 px-10">
+          <kbd class="kbd w-[110px] h-[60px]">
+            <img
+              class="object-cover"
+              src="./images/tabler-icon-steering-wheel.png"
+              alt=""
+            />
+          </kbd>
+        </div>
+        <!--Seats-->
+        <section class="seats flex justify-evenly gap-x-20 my-5 py-10 px-10">
+          <div class="left-column grid grid-cols-2 gap-6 cursor-pointer">
+            <kbd id="A1" class="kbd w-[100px] h-[50px]">A1</kbd>
+            <kbd id="A2" class="kbd w-[100px] h-[50px]">A2</kbd>
+            <kbd id="B1" class="kbd w-[100px] h-[50px]">B1</kbd>
+            <kbd id="B2" class="kbd w-[100px] h-[50px]">B2</kbd>
+            <kbd id="C1" class="kbd w-[100px] h-[50px]">C1</kbd>
+            <kbd id="C2" class="kbd w-[100px] h-[50px]">C2</kbd>
+            <kbd id="D1" class="kbd w-[100px] h-[50px]">D1</kbd>
+            <kbd id="D2" class="kbd w-[100px] h-[50px]">D2</kbd>
+            <kbd id="E1" class="kbd w-[100px] h-[50px]">E1</kbd>
+            <kbd id="E2" class="kbd w-[100px] h-[50px]">E2</kbd>
+            <kbd id="F1" class="kbd w-[100px] h-[50px]">F1</kbd>
+            <kbd id="F2" class="kbd w-[100px] h-[50px]">F2</kbd>
+          </div>
+          <div class="right-column grid grid-cols-2 gap-6 cursor-pointer">
+            <kbd id="A3" class="kbd w-[100px] h-[50px]">A3</kbd>
+            <kbd id="A4" class="kbd w-[100px] h-[50px]">A4</kbd>
+            <kbd id="B3" class="kbd w-[100px] h-[50px]">B3</kbd>
+            <kbd id="B4" class="kbd w-[100px] h-[50px]">B4</kbd>
+            <kbd id="C3" class="kbd w-[100px] h-[50px]">C3</kbd>
+            <kbd id="C4" class="kbd w-[100px] h-[50px]">C4</kbd>
+            <kbd id="D3" class="kbd w-[100px] h-[50px]">D3</kbd>
+            <kbd id="D4" class="kbd w-[100px] h-[50px]">D4</kbd>
+            <kbd id="E3" class="kbd w-[100px] h-[50px]">E3</kbd>
+            <kbd id="E4" class="kbd w-[100px] h-[50px]">E4</kbd>
+            <kbd id="F3" class="kbd w-[100px] h-[50px]">F3</kbd>
+            <kbd id="F4" class="kbd w-[100px] h-[50px]">F4</kbd>
+          </div>
+        </section>
+      </div>
+
+      <!--Selected Seat Information-->
+      <section class="information bg-slate-400 mx-auto">
+        <div class="select-seat text-center mb-4">
+          <h2 class="text-lg lg:text-3xl font-semibold text-black">
+            Your Selected Seat
+          </h2>
+          <hr />
+        </div>
+        <div class="seat-info px-10 h-[300px] bg-green-100 rounded-xl">
+          <div class="flex justify-between space-x-20">
+            <h1>Seat</h1>
+            <p>Class</p>
+            <p>Price</p>
+            <hr />
+          </div>
+          <!--Display-->
+          <div class="append-info"></div>
+          <!--Total Price-->
+          <div class="total-price flex justify-between">
+            <h1>Total Price</h1>
+            <span id="total-price-show">0</span>
+          </div>
+          <!--Coupon field-->
+          <div class="coupon flex">
+            <input
+              class="relative px-10 py-5 rounded-xl"
+              placeholder="Have any Coupon?"
+              type="text"
+              name=""
+              id="coupon-input"
+            />
+            <div class="absolute mx-[12%] my-2">
+              <button id="coupon-apply-btn" class="btn btn-active btn-accent">
+                Apply
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <h3>Grand Total</h3>
+            <p><span id="grand-total">0</span></p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
