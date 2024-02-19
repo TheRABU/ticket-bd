@@ -1,3 +1,4 @@
+// renderSeats();
 function renderSeats() {
   const container = document.getElementById("choose-seats-container");
   if (!container) {
@@ -20,14 +21,14 @@ function renderSeats() {
     container.appendChild(seat);
   }
 }
-// renderSeats();
 
 let totalCount = 0;
 let totalPrice = 0;
 let grandTotal = 0;
-let seatsLeft = 20;
+let seatsLeft = 26;
 
 // get all seats buttons
+
 const getAllSeatBtn = document.querySelectorAll(".kbd");
 for (let index = 0; index < getAllSeatBtn.length; index++) {
   const seats = getAllSeatBtn[index];
@@ -40,7 +41,9 @@ for (let index = 0; index < getAllSeatBtn.length; index++) {
       return;
     }
     totalCount++;
+
     seatsLeft--;
+    document.getElementById("seat-left").innerText = seatsLeft + " Seats left";
     seatEl.style.backgroundColor = "green";
 
     const seatEntry = createSeatEntry(seatId);
@@ -107,3 +110,16 @@ document.getElementById("coupon-form").addEventListener("submit", (e) => {
     window.alert("invalid coupon");
   }
 });
+
+//validate modal
+function validateModal() {
+  const userName = document.getElementById("user-name").value;
+  const userNumber = document.getElementById("user-number").value;
+
+  if (userName === "" || userNumber === "") {
+    window.alert("Please fill in all required fields.");
+  } else {
+    // If both fields are filled, show the modal
+    my_modal_4.showModal();
+  }
+}

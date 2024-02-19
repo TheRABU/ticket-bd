@@ -17,50 +17,48 @@
   <body>
     <header class="container mx-auto px-16 py-10">
       <!--Navbar-->
-      <nav>
-        <div class="navbar bg-base-100">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <div
-                tabindex="0"
-                role="button"
-                class="btn btn-ghost lg:hidden"
-              ></div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li><a>Home</a></li>
-                <li>
-                  <a>Parent</a>
-                  <ul class="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                  </ul>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
-            </div>
-            <a class="font-bold text-4xl text-black cursor-pointer"
-              >T-TicketBD</a
+      <div class="navbar bg-base-100 px-16">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden"
+            ></div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
               <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Destination</a></li>
-              <li><a>Search</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
             </ul>
           </div>
-          <div class="navbar-end">
-            <button class="btn primary">
-              <a class="btn">Bus</a>
-              <img src="/images/bus-icon.png" alt="" />
-            </button>
-          </div>
+          <a class="font-bold text-4xl text-black cursor-pointer">T-TicketBD</a>
         </div>
-      </nav>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <button class="btn border-none">
+            <a href="#select-seat"></a>
+            Bus
+            <img src="/images/bus-icon.png" alt="" />
+          </button>
+        </div>
+      </div>
+
       <!--Banner image-->
       <section class="banner container mx-auto px-16 py-10">
         <div
@@ -79,7 +77,7 @@
                 .
               </p>
               <button class="btn bg-[#1DD100] border-none">
-                <a href="#select-seat-section">Buy Tickets</a>
+                <a href="#select-seat">Buy Tickets</a>
               </button>
             </div>
             <div
@@ -224,7 +222,9 @@
               >
                 <img src="./images/seat-green.png" alt="" />
                 <!--Seat left id-->
-                <p id="seat-left" class="text-[#1DD100]">40 Seats left</p>
+                <p class="text-[#1DD100]">
+                  <span id="seat-left"> 26 </span> Seats left
+                </p>
               </div>
             </div>
             <!--Mid section Route-->
@@ -271,7 +271,7 @@
       <!--Ticket Selecting section-->
       <!--Seat section-->
       <div class="flex justify-around container mx-auto px-5 lg:px-20">
-        <div class="select-seat text-center">
+        <div id="select-seat" class="select-seat text-center">
           <h2 class="text-lg lg:text-3xl font-semibold text-black">
             Select your seat
           </h2>
@@ -380,7 +380,7 @@
           </section>
           <!--User information-->
           <section class="user-info mx-auto rounded-lg bg-slate-100 my-5">
-            <form class="px-5 py-2" action="submit">
+            <form class="px-5 py-2" action="#">
               <div class="flex flex-col justify-center text-black">
                 <h1 class="px-5">Passenger Name *</h1>
                 <input
@@ -413,21 +413,78 @@
                   id="user-email"
                 />
               </div>
-              <div
-                class="text-center my-5 px-5 bg-[#1DD100] rounded-xl py-6 cursor-pointer"
+              <button
+                class="btn text-center text-white mx-8 my-5 px-36 bg-[#1DD100] rounded-xl cursor-pointer"
+                onclick="validateModal()"
               >
-                <button class="font-semibold text-white text-xl">Next</button>
-              </div>
+                Next
+              </button>
+              <dialog id="my_modal_4" class="modal">
+                <div class="modal-box w-2/6 max-w-5xl h-[400px] px-20">
+                  <div class="flex justify-center">
+                    <img
+                      class="object-cover"
+                      src="./images/success.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col justify-center items-center">
+                    <h3 class="font-bold text-lg">SUCCESS</h3>
+                    <p class="py-4">
+                      Thank you for Booking Our Bus Seats. We are working hard
+                      to find the best service and deals for you. Shortly you
+                      will find a confirmation in your email.
+                    </p>
+                  </div>
+
+                  <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                      <!-- if there is a button, it will close the modal -->
+                      <button
+                        class="btn rounded-3xl px-14 bg-[#27AE60] text-white font-semibold"
+                      >
+                        Continue
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </form>
           </section>
-          <div class="flex justify-evenly">
+          <div class="flex justify-evenly mb-6">
             <a href="#">Terms and Conditions</a>
             <a href="#">Cancellation Policy</a>
           </div>
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer class="bg-[#030712] text-white h-[450px] py-20 px-20">
+      <div class="flex justify-between mb-5">
+        <div class="w-2/6">
+          <h1 class="text-5xl font-semibold">T-TicketBD</h1>
+          <p>
+            P-Ticket is a digital platform to make your daily commuting better.
+            Try our service and enjoy a smooth ticket buying experience.
+          </p>
+        </div>
+        <div class="w-2/6 cursor-pointer">
+          <h1 class="text-3xl font-semibold">Download our app</h1>
+          <img src="./images/playstore.png" alt="" />
+        </div>
+      </div>
+      <hr class="border border-dashed bg-white" />
+      <div class="flex justify-between py-10">
+        <div class="flex space-x-3">
+          <p>@All rights reserved</p>
+          <p>T-TicketBD services limited 2024</p>
+        </div>
+        <div class="flex space-x-3">
+          <a href="">Terms and Conditions</a>
+          <a href="">Return and fund policy</a>
+          <a href="">Privacy policy</a>
+        </div>
+      </div>
+    </footer>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
