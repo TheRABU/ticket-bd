@@ -269,16 +269,14 @@
         </div>
       </section>
       <!--Ticket Selecting section-->
-      <section
-        id="select-seat-section"
-        class="grid grid-cols-2 mx-auto px-20 gap-6"
-      >
-        <div class="col-span-1">
-          <div class="mb-6 text-center">
-            <h3 class="text-4xl font-bold text-black">Select your seat</h3>
-            <hr />
-          </div>
-          <div class="flex mx-auto px-20 justify-between items-center">
+      <!--Seat section-->
+      <div class="flex justify-around container mx-auto px-5 lg:px-20">
+        <div class="select-seat text-center">
+          <h2 class="text-lg lg:text-3xl font-semibold text-black">
+            Select your seat
+          </h2>
+          <hr />
+          <div class="flex justify-between px-10 py-5">
             <div class="flex">
               <img src="./images/seat-gray.png" alt="" />
               <p>Available</p>
@@ -286,175 +284,150 @@
             <div class="flex">
               <img src="./images/seat-green-filled.png" alt="" />
               <p>Selected</p>
+            </div>
+          </div>
+          <!--Driver seat image-->
+          <div class="flex justify-end py-5 px-10">
+            <kbd class="kbd w-[110px] h-[60px]">
+              <img
+                class="object-cover"
+                src="./images/tabler-icon-steering-wheel.png"
+                alt=""
+              />
+            </kbd>
+          </div>
+          <!--Seats-->
+          <section
+            id="choose-seats-container"
+            class="seats flex justify-evenly gap-x-20 my-5 py-10 px-10"
+          >
+            <div class="left-column grid grid-cols-2 gap-6 cursor-pointer">
+              <kbd id="A1" class="kbd w-[100px] h-[50px]">A1</kbd>
+              <kbd id="A2" class="kbd w-[100px] h-[50px]">A2</kbd>
+              <kbd id="B1" class="kbd w-[100px] h-[50px]">B1</kbd>
+              <kbd id="B2" class="kbd w-[100px] h-[50px]">B2</kbd>
+              <kbd id="C1" class="kbd w-[100px] h-[50px]">C1</kbd>
+              <kbd id="C2" class="kbd w-[100px] h-[50px]">C2</kbd>
+              <kbd id="D1" class="kbd w-[100px] h-[50px]">D1</kbd>
+              <kbd id="D2" class="kbd w-[100px] h-[50px]">D2</kbd>
+              <kbd id="E1" class="kbd w-[100px] h-[50px]">E1</kbd>
+              <kbd id="E2" class="kbd w-[100px] h-[50px]">E2</kbd>
+              <kbd id="F1" class="kbd w-[100px] h-[50px]">F1</kbd>
+              <kbd id="F2" class="kbd w-[100px] h-[50px]">F2</kbd>
+            </div>
+            <div class="right-column grid grid-cols-2 gap-6 cursor-pointer">
+              <kbd id="A3" class="kbd w-[100px] h-[50px]">A3</kbd>
+              <kbd id="A4" class="kbd w-[100px] h-[50px]">A4</kbd>
+              <kbd id="B3" class="kbd w-[100px] h-[50px]">B3</kbd>
+              <kbd id="B4" class="kbd w-[100px] h-[50px]">B4</kbd>
+              <kbd id="C3" class="kbd w-[100px] h-[50px]">C3</kbd>
+              <kbd id="C4" class="kbd w-[100px] h-[50px]">C4</kbd>
+              <kbd id="D3" class="kbd w-[100px] h-[50px]">D3</kbd>
+              <kbd id="D4" class="kbd w-[100px] h-[50px]">D4</kbd>
+              <kbd id="E3" class="kbd w-[100px] h-[50px]">E3</kbd>
+              <kbd id="E4" class="kbd w-[100px] h-[50px]">E4</kbd>
+              <kbd id="F3" class="kbd w-[100px] h-[50px]">F3</kbd>
+              <kbd id="F4" class="kbd w-[100px] h-[50px]">F4</kbd>
+            </div>
+          </section>
+        </div>
+        <div>
+          <!--Selected Seat Information-->
+          <section class="information mx-auto">
+            <div class="select-seat text-center mb-4">
+              <h2 class="text-lg lg:text-3xl font-semibold text-black">
+                Your Selected Seat
+              </h2>
               <hr />
             </div>
-           
-          </div>
-           <!--Bus Info-->
-           <div class="flex justify-end">
-            <button class="btn btn-active ">
-                <img src="./images/fare.png" alt="">
-            </button>
-           </div>
-           <!--Seats-->
-           <div class="flex justify-around mx-auto px-16 py-20 items-center">
-            <!--Left side seats-->
-            <div class="left-column grid col-span-2 gap-y-3">
-                <div>
-                    A 
-                    <button class="btn btn-active seat-btn"><h3>A1</h3></button>
-                </div>
-                <div>
-                    B 
-                    <button class="btn btn-active seat-btn "><h3>B1</h3></button>
-                </div>
-                <div>
-                    C 
-                    <button class="btn btn-active seat-btn "><h3>C1</h3></button>
-                </div>
-                <div>
-                    D 
-                    <button class="btn btn-active seat-btn "><h3>D1</h3></button>
-                </div>
-                
-                
-            </div>
-            <div class="right-column grid col-span-2 gap-y-3">
-                <div>
-                    <button class="btn btn-active seat-btn"><h3>A2</h3></button>
-                </div>
-                <div>
-                   
-                    <button class="btn btn-active seat-btn "><h3>B2</h3></button>
-                </div>
-                <div>
-                   
-                    <button class="btn btn-active seat-btn "><h3>C2</h3></button>
-                </div>
-                <div>
-                    
-                    <button class="btn btn-active seat-btn "><h3>D2</h3></button>
-                </div>
-            </div>
-            <!--Right side seats-->
-            <div class="left-column grid col-span-2 gap-y-3">
-                <div>
-            
-                    <button class="btn btn-active seat-btn "><h3>A3</h3></button>
-                </div>
-                <div>
-                
-                    <button class="btn btn-active seat-btn "><h3>B3</h3></button>
-                </div>
-                <div>
-                
-                    <button class="btn btn-active seat-btn "><h3>C3</h3></button>
-                </div>
-                <div>
-                
-                    <button class="btn btn-active seat-btn "><h3>D3</h3></button>
-                </div>
-                
-                
-            </div>
-            <div class="right-column grid col-span-2 gap-y-3">
-                <div>
-                    <button class="btn btn-active seat-btn "><h3>A4</h3></button>
-                </div>
-                <div>
-                   
-                    <button class="btn btn-active seat-btn "><h3>B4</h3></button>
-                </div>
-                <div>
-                   
-                    <button class="btn btn-active seat-btn "><h3>C4</h3></button>
-                </div>
-                <div>
-                    
-                    <button class="btn btn-active seat-btn "><h3>D4</h3></button>
-                </div>
-            </div>
-           </div>
-        </div>
-        </div>
-
-        <div class="col-span-1">
-          <h3 class="text-4xl text-center">Your selected seat</h3>
-          
-          <div
-            class="total-container mx-auto w-[430px] h-[340px] bg-blue-100 space-x-7 my-4 rounded-xl"
-          >
-            <div class="flex justify-around text-center mb-3">
-              <div>
-                Seat
-                <div class="badge badge-secondary">1</div>
+            <div class="seat-info px-10 space-y-5 py-6 bg-[#F7F8F8] rounded-xl">
+              <div class="flex justify-between space-x-20">
+                <h1>Seat</h1>
+                <p>Class</p>
+                <p>Price</p>
+                <hr />
               </div>
-
-              <h1>Class</h1>
-              <h1>Price</h1>
+              <!--Display-->
+              <div class="append-info"></div>
+              <!--Total Price-->
+              <div class="total-price flex justify-between">
+                <h1>Total Price</h1>
+                <span id="total-price-show">0</span>
+              </div>
+              <!--Coupon field-->
+              <form class="coupon flex" action="submit" id="coupon-form">
+                <input
+                  class="relative px-10 py-5 rounded-xl"
+                  placeholder="Have any Coupon?"
+                  type="text"
+                  name=""
+                  id="coupon-input"
+                />
+                <div class="absolute mx-[12%] my-2">
+                  <button
+                    id="coupon-apply-btn"
+                    class="btn btn-active btn-accent"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </form>
+              <div class="flex justify-between">
+                <h3>Grand Total</h3>
+                <p><span id="grand-total">0</span></p>
+              </div>
             </div>
-            <hr class="bg-black w-5/6 border-dashed" />
-            <!--Display output-->
-            <div id="display-output-div"></div>
-            <div class="flex justify-around text-center">
-              <h1>C2</h1>
-              <p>Economy</p>
-              <p>Price</p>
-            </div>
-            <hr class="bg-black w-5/6 border-dashed" />
-            <div class="flex justify-around">
-              <h1>Total Price: </h1>
-              <p><span id="total-price">BDT</span></p>
-            </div>
-            <!--Coupon-->
-            <div
-              class="flex items-center mx-auto space-x-3 outline-none rounded-xl"
-            >
-              <input
-                type="text"
-                class="px-10 py-5"
-                placeholder="Do you have any coupon?"
-                name=""
-                id="coupon-input"
-              />
-              <button class="btn coupon-apply-btn bg-[#1DD100] px-10 py-8">Apply</button>
-            </div>
-            <div class="flex justify-around">
-                <h1>Grand Total</h1>
-                <p><span id="grand-total">00</span></p>
-            </div>
-          </div>
-          <!--Passenger Info-->
-          <div class="passenger-info-container mx-auto h-[360px] w-[430px] bg-gray-50">
-            <div class="flex flex-col text-start justify-start">
-                <h1 class="font-semibold text-black px-6">
-                    Passenger Name *
-                </h1>
-                <input class="mx-auto rounded-xl px-24 py-4" type="text" name="" id="passenger-name">
-            </div>
-            <div class="flex flex-col text-start justify-start">
-                <h1 class="font-semibold text-black px-6">
-                    Phone Number *
-                </h1>
-                <input class="mx-auto rounded-xl px-24 py-4" placeholder="Enter your Phone" type="tel" name="" id="passenger-mobile">
-            </div>
-            <div class="flex flex-col text-start justify-start">
-                <h1 class="font-semibold text-black px-6">
-                    Email ID 
-                </h1>
-                <input class="mx-auto rounded-xl px-24 py-4" placeholder="Enter your Email" type="email" name="" id="passenger-email">
-            </div>
-            <div class="text-center mx-auto my-4 bg-[#1DD100] rounded-xl px-28 py-4">
+          </section>
+          <!--User information-->
+          <section class="user-info mx-auto rounded-lg bg-slate-100 my-5">
+            <form class="px-5 py-2" action="submit">
+              <div class="flex flex-col justify-center text-black">
+                <h1 class="px-5">Passenger Name *</h1>
+                <input
+                  class="px-5 py-5 mx-5 rounded-xl bg-[#fff]"
+                  placeholder="Enter your name"
+                  type="text"
+                  name=""
+                  id="user-name"
+                  required
+                />
+              </div>
+              <div class="flex flex-col justify-center text-black">
+                <h1 class="px-5">Passenger Mobile *</h1>
+                <input
+                  class="px-5 py-5 mx-5 rounded-xl bg-[#fff]"
+                  placeholder="Enter your number"
+                  type="tel"
+                  name=""
+                  id="user-number"
+                  required
+                />
+              </div>
+              <div class="flex flex-col justify-center text-black">
+                <h1 class="px-5">Email Id</h1>
+                <input
+                  class="px-5 py-5 mx-5 rounded-xl bg-[#fff]"
+                  placeholder="Enter your name"
+                  type="email"
+                  name=""
+                  id="user-email"
+                />
+              </div>
+              <div
+                class="text-center my-5 px-5 bg-[#1DD100] rounded-xl py-6 cursor-pointer"
+              >
                 <button class="font-semibold text-white text-xl">Next</button>
-            </div>
-            <div class="flex justify-evenly">
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Cancellation Policy</a>
-            </div>
+              </div>
+            </form>
+          </section>
+          <div class="flex justify-evenly">
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Cancellation Policy</a>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
     <footer></footer>
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

@@ -14,9 +14,7 @@
   </head>
   <body>
     <!--Seat section-->
-    <div
-      class="flex justify-around container mx-auto px-5 lg:px-20 bg-blue-500"
-    >
+    <div class="flex justify-around container mx-auto px-5 lg:px-20">
       <div class="select-seat text-center">
         <h2 class="text-lg lg:text-3xl font-semibold text-black">
           Select your seat
@@ -43,7 +41,10 @@
           </kbd>
         </div>
         <!--Seats-->
-        <section class="seats flex justify-evenly gap-x-20 my-5 py-10 px-10">
+        <section
+          id="choose-seats-container"
+          class="seats flex justify-evenly gap-x-20 my-5 py-10 px-10"
+        >
           <div class="left-column grid grid-cols-2 gap-6 cursor-pointer">
             <kbd id="A1" class="kbd w-[100px] h-[50px]">A1</kbd>
             <kbd id="A2" class="kbd w-[100px] h-[50px]">A2</kbd>
@@ -74,51 +75,99 @@
           </div>
         </section>
       </div>
-
-      <!--Selected Seat Information-->
-      <section class="information bg-slate-400 mx-auto">
-        <div class="select-seat text-center mb-4">
-          <h2 class="text-lg lg:text-3xl font-semibold text-black">
-            Your Selected Seat
-          </h2>
-          <hr />
-        </div>
-        <div class="seat-info px-10 h-[300px] bg-green-100 rounded-xl">
-          <div class="flex justify-between space-x-20">
-            <h1>Seat</h1>
-            <p>Class</p>
-            <p>Price</p>
+      <div>
+        <!--Selected Seat Information-->
+        <section class="information mx-auto">
+          <div class="select-seat text-center mb-4">
+            <h2 class="text-lg lg:text-3xl font-semibold text-black">
+              Your Selected Seat
+            </h2>
             <hr />
           </div>
-          <!--Display-->
-          <div class="append-info"></div>
-          <!--Total Price-->
-          <div class="total-price flex justify-between">
-            <h1>Total Price</h1>
-            <span id="total-price-show">0</span>
-          </div>
-          <!--Coupon field-->
-          <div class="coupon flex">
-            <input
-              class="relative px-10 py-5 rounded-xl"
-              placeholder="Have any Coupon?"
-              type="text"
-              name=""
-              id="coupon-input"
-            />
-            <div class="absolute mx-[12%] my-2">
-              <button id="coupon-apply-btn" class="btn btn-active btn-accent">
-                Apply
-              </button>
+          <div class="seat-info px-10 space-y-5 py-6 bg-[#F7F8F8] rounded-xl">
+            <div class="flex justify-between space-x-20">
+              <h1>Seat</h1>
+              <p>Class</p>
+              <p>Price</p>
+              <hr />
+            </div>
+            <!--Display-->
+            <div class="append-info"></div>
+            <!--Total Price-->
+            <div class="total-price flex justify-between">
+              <h1>Total Price</h1>
+              <span id="total-price-show">0</span>
+            </div>
+            <!--Coupon field-->
+            <form class="coupon flex" action="submit" id="coupon-form">
+              <input
+                class="relative px-10 py-5 rounded-xl"
+                placeholder="Have any Coupon?"
+                type="text"
+                name=""
+                id="coupon-input"
+              />
+              <div class="absolute mx-[12%] my-2">
+                <button id="coupon-apply-btn" class="btn btn-active btn-accent">
+                  Apply
+                </button>
+              </div>
+            </form>
+            <div class="flex justify-between">
+              <h3>Grand Total</h3>
+              <p><span id="grand-total">0</span></p>
             </div>
           </div>
-          <div class="flex justify-between">
-            <h3>Grand Total</h3>
-            <p><span id="grand-total">0</span></p>
-          </div>
+        </section>
+        <!--User information-->
+        <section class="user-info mx-auto rounded-lg bg-slate-100 my-5">
+          <form class="px-5 py-2" action="submit">
+            <div class="flex flex-col justify-center text-black">
+              <h1 class="px-5">Passenger Name *</h1>
+              <input
+                class="px-5 py-5 mx-5 rounded-xl bg-slate-300"
+                placeholder="Enter your name"
+                type="text"
+                name=""
+                id="user-name"
+                required
+              />
+            </div>
+            <div class="flex flex-col justify-center text-black">
+              <h1 class="px-5">Passenger Mobile *</h1>
+              <input
+                class="px-5 py-5 mx-5 rounded-xl bg-slate-300"
+                placeholder="Enter your number"
+                type="tel"
+                name=""
+                id="user-number"
+                required
+              />
+            </div>
+            <div class="flex flex-col justify-center text-black">
+              <h1 class="px-5">Email Id</h1>
+              <input
+                class="px-5 py-5 mx-5 rounded-xl bg-slate-300"
+                placeholder="Enter your name"
+                type="email"
+                name=""
+                id="user-email"
+              />
+            </div>
+            <div
+              class="text-center my-5 px-5 bg-[#1DD100] rounded-xl py-6 cursor-pointer"
+            >
+              <button class="font-semibold text-white text-xl">Next</button>
+            </div>
+          </form>
+        </section>
+        <div class="flex justify-evenly">
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Cancellation Policy</a>
         </div>
-      </section>
+      </div>
     </div>
+
     <script src="./scripts/main.js"></script>
   </body>
 </html>
